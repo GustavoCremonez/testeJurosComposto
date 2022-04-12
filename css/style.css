@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --color-primary: #8f9dec;
+    --color-secondary: #BD6EF5;
+    --dark-color: #44022e;
+}
+
+
+/* ------------
+    RESET CSS 
+---------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*----------------
+    BODY BASE CSS 
+------------------*/
+body{
+    font-family: 'Anek Bangla', sans-serif;
+    font-size: 18px;
+    background-color: var(--color-primary);
+}
+
+
+
+/*-------------------- 
+CONTAINER DEFINITION 
+---------------------*/
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*---------------
+FIRST PAGE CSS 
+---------------*/
+.firstPage{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--color-secondary);
+    box-shadow: 2px 3px 15px var(--dark-color);
+    border-radius: 50px;
+}
+
+.firstPage.hidden{
+    display: none;
+}
+
+.firstPage header{
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+    box-shadow: 0px 2px 7px var(--dark-color);
+    color: var(--dark-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.firstPage header h1{
+    font-size: 2.7em;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.firstPage .main{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--dark-color);
+}
+ 
+.firstPage .main h2{
+    font-size: 2.3em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.firstPage .main .formFees{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+}
+
+.firstPage .main .formFees label{
+    font-size: 1.1em;
+    width: 40%;
+}
+
+.firstPage .main .formFees input{
+    border: none;
+    width: 60%;
+    padding: 5px;
+    border-radius: 6px;
+
+}
+
+.firstPage .main .formFees select{
+    padding: 5px;
+    border: none;
+    border-radius: 6px;
+    width: 70%;
+}
+
+.firstPage .main .formFees button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--color-primary);
+    box-shadow: 1px 1px 10px var(--dark-color);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+ 
+
+/*---------------
+SECOND PAGE CSS 
+---------------*/
+.secondPage.hidden{
+    display: none;
+}
