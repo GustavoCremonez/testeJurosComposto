@@ -1,75 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ciclic - Fees</title>
 
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        
-        <div class="container">
-            <div class="firstPage">
-                <header>
-                    <h1> Ciclic </h1>
-                </header>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ciclic - Fees</title>
 
-                <div class="main">
-                    <h2> Simulator </h2>
+	<link rel="stylesheet" href="css/style.css">
+</head>
 
-                    <form class="formFees">
-                        <div>
-                            <label for="name">Nome</label>
-                            <input type="text" name="name" id="name">
-                        </div>
-                        <div>
-                            <label for="monthlyPayment">Mensalidade</label>
-                            <input type="number" name="monthlyPayment" id="monthlyPayment">
-                        </div>
-                        <div>
-                            <label for="time">Tempo</label>
-                            <select name="time" id="time">
-                                <option value="oneYear"> 1 Ano</option>
-                                <option value="twoYear"> 2 Ano</option>
-                                <option value="threeYear"> 3 Ano</option>
-                                <option value="fourYear"> 4 Ano</option>
-                                <option value="fiveYear"> 5 Ano</option>
-                            </select>
-                        </div>
+<body>
 
-                        <div>
-                            <label for="fees">Taxa de juros</label>
-                            <input type="number" name="fees" id="fees">
-                        </div>
+	<div class="container">
+		<div class="firstPage">
+			<header>
+				<h1> Ciclic </h1>
+			</header>
 
-                        <button>Simular</button>
-                    </form>
-                </div>  
-            </div>
+			<div class="main">
+				<h2> Simulador </h2>
 
+				<form class="formFees">
+					<div>
+						<label for="name">Nome</label>
+						<input type="text" name="name" id="name">
+					</div>
+					<div>
+						<label for="monthlyPayment">Mensalidade</label>
+						<input type="number" name="monthlyPayment" id="monthlyPayment">
+					</div>
+					<div>
+						<label for="time">Tempo</label>
+						<select name="time" id="time">
+							<option value="oneYear"> 1 Ano</option>
+							<option value="twoYear"> 2 Ano</option>
+							<option value="threeYear"> 3 Ano</option>
+							<option value="fourYear"> 4 Ano</option>
+							<option value="fiveYear"> 5 Ano</option>
+						</select>
+					</div>
 
-            <div class="secondPage hidden">
-                <header>
-                    <h1>Ciclic</h1>
-                </header>
+					<div>
+						<label for="fees">Taxa de juros</label>
+						<input type="number" name="fees" id="fees">
+					</div>
 
-                <div class="main">
-                    <div class="contentSecondPage">
-                        <span>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sed, neque atque eaque officiis, possimus aliquam minus culpa maxime voluptates repellat dignissimos minima nulla consequatur cum autem quae dolores maiores.
-                        </span>
-                    </div>
-
-                    <button class="simulateAgain">Simular novamente</button>
-                </div>
-            </div>
-        </div>
+					<button>Simular</button>
+				</form>
+			</div>
+		</div>
 
 
-        <script src="js/script.js">
+		<div class="secondPage hidden">
+			<header>
+				<h1>Ciclic</h1>
+			</header>
 
-        </script>
-    </body>
+			<div class="main">
+				<div class="contentSecondPage ">
+					<span>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sed, neque atque eaque officiis, possimus
+						aliquam minus culpa maxime voluptates repellat dignissimos minima nulla consequatur cum autem quae
+						dolores maiores.
+					</span>
+				</div>
+
+				<button class="simulateAgain ">Simular novamente</button>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/script.js">
+
+	</script>
+</body>
+
 </html>
