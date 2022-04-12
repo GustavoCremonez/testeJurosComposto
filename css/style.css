@@ -25,7 +25,8 @@
 body {
     font-family: 'Anek Bangla', sans-serif;
     font-size: 18px;
-    background-color: var(--color-primary);
+    background: rgb(143,157,236);
+    background: linear-gradient(163deg, rgba(143,157,236,1) 25%, rgba(189,110,245,1) 88%);
 }
 
 
@@ -135,6 +136,9 @@ FIRST PAGE CSS
     box-shadow: 1px 1px 10px var(--dark-color);
 }
 
+.firstPage .main .formFees button:hover{
+    background-color: #9ca8f7;
+}
 
 /*---------------
 SECOND PAGE CSS 
