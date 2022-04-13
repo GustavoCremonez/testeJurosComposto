@@ -187,9 +187,16 @@ SECOND PAGE CSS
     font-weight: 400;
 }
 
+.secondPage .main .contentSecondPage{ 
+    color: var(--dark-color);
+    font-size: 1.4em;
+    text-align: center;
+}
+
 
 .simulateAgain{
-    font-size: 1.7em;
+    padding: 10px;
+    font-size: 1.2em;
     font-weight: 700;
     color: var(--dark-color);
     width: 50%;
