@@ -214,3 +214,99 @@ SECOND PAGE CSS
 .secondPage.hidden {
     display: none;
 }
+
+
+/*--------------------------------
+MEDIA QUERY TO RESPONSIVE LAYOUT
+----------------------------------*/
+
+@media(max-width: 1199px){
+    .firstPage{
+        width: 60%;
+    }
+    .secondPage{
+        width: 60%;
+    }
+}
+
+@media (max-width: 999px) {
+    .firstPage{
+        width: 65%;
+    }
+    .secondPage{
+        width: 65%;
+    }
+}
+
+@media (max-width: 999px) {
+    .firstPage{
+        width: 70%;
+    }
+    .secondPage{
+        width: 70%;
+    }
+}
+
+@media (max-width: 859px) {
+    .firstPage{
+        width: 75%;
+    }
+    .secondPage{
+        width: 75%;
+    }
+}
+
+@media (max-width: 799px) {
+    .firstPage{
+        width: 80%;
+    }
+    .secondPage{
+        width: 80%;
+    }
+}
+
+@media (max-width: 744px) {
+    .firstPage{
+        width: 85%;
+    }
+    .secondPage{
+        width: 85%;
+    }
+}
+
+@media (max-width: 695px) {
+    .firstPage{
+        width: 90%;
+    }
+    .secondPage{
+        width: 90%;
+    }
+}
+
+@media (max-width: 655px) {
+    .firstPage{
+        width: 95%;
+    }
+    .secondPage{
+        width: 95%;
+    }
+}
+
+@media (max-width: 624px) {
+    .firstPage{
+        width: 100%;
+    }
+    .secondPage{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .firstPage .formFees div{
+        display: flex;
+        flex-direction: column;
+    }
+    .secondPage{
+        width: 100%;
+    }
+}
