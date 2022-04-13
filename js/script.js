@@ -14,37 +14,37 @@ formFee.addEventListener('submit', function(e){
     const name = target.name.value
     const monthlyPayment = target.monthlyPayment.value
     const time = target.time.value
-    const fees = target.fees.value.toString().replace(",", ".")
-
+    const fees = target.fees.value.toString().replace(",", ".").replace("%", "")
 
     apiFetch(name, monthlyPayment, time, fees)
 })
 
 const apiFetch = (name, monthlyPayment, time, fees) => {
-    const expr = { 
-        "expr" : [`${monthlyPayment} * (((1 + ${fees}) ^ [${time * 12} - 1) / ${fees})`],
-        "precision": 3
+    const expr =  {
+       expr: `${monthlyPayment} * (((1 + ${fees / 100}) ^ ${time * 12} - 1) / ${fees / 100})`,
+       precision: 2,
     }
 
-    const init = {
+    fetch(urlAPI, {
         method: 'POST',
         headers: {
-            "content-type": 'application/json'
+            "content-type": "application/json"
         },
-        body: encodeURI(expr)
-    }
-    fetch(urlAPI, init)
-        .then(toJson)
+        body: [JSON.stringify(expr)]
+    },)
+        .then(response => response.json())
         .then(makeHtmlElement)
         .catch(apiErr)
 }
 
-const toJson = (response) =>{
-    return response.json()
-}
 
 const makeHtmlElement = function(data){
-    console.log(data)
+    firstPage.classList.add('hidden')
+    secondPage.classList.remove('hidden')
+    divSecondPage.innerHTML = `
+        ${data.result}      
+    `
+    simulateAgain.addEventListener('click', reloadPage)
 }
 
 const apiErr = (response) => {
@@ -57,7 +57,12 @@ const apiErr = (response) => {
         <h5>Error = ${response}</h5>
     `
 
-    simulateAgain.addEventListener('click', function(e){
-        location.reload()
-    })
+    simulateAgain.addEventListener('click', reloadPage)
+}
+
+
+
+
+const reloadPage = () =>{
+    location.reload()
 }

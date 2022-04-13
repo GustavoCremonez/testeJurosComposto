@@ -24,15 +24,16 @@
 				<form class="formFees">
 					<div>
 						<label for="name">Nome</label>
-						<input type="text" name="name" id="name">
+						<input type="text" name="name" id="name" placeholder="Seu nome">
 					</div>
 					<div>
-						<label for="monthlyPayment">Mensalidade</label>
-						<input type="number" name="monthlyPayment" id="monthlyPayment">
+						<label for="monthlyPayment">mensalidade</label>
+						<input type="number" name="monthlyPayment" id="monthlyPayment" placeholder="Valor da mensalidade:R$ 20,00">
 					</div>
 					<div>
 						<label for="time">Tempo</label>
 						<select name="time" id="time">
+							<option>-- Tempo de contribuição --</option>
 							<option value="1"> 1 Ano</option>
 							<option value="2"> 2 Ano</option>
 							<option value="3"> 3 Ano</option>
@@ -43,7 +44,7 @@
 
 					<div>
 						<label for="fees">Taxa de juros</label>
-						<input type="number" step="any" name="fees" id="fees">
+						<input type="number" step="any" name="fees" id="fees" placeholder="Taxa de juros">
 					</div>
 
 					<button id="simulate">Simular</button>
