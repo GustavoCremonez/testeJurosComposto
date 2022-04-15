@@ -105,6 +105,18 @@ FIRST PAGE CSS
     width: 50%;
 }
 
+.firstPage .main .formFees .alert{
+    color: rgb(197, 23, 23);
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid rgb(197, 23, 23);
+}
+
+.firstPage .main .formFees .alert.hidden{
+    display: none;
+}
+
 .firstPage .main .formFees label {
     font-size: 1.1em;
     width: 40%;
