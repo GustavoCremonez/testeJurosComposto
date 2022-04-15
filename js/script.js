@@ -12,7 +12,7 @@ formFee.addEventListener('submit', function(e){
     e.preventDefault()
     const target = e.target
     const name = target.name.value
-    const monthlyPayment = target.monthlyPayment.value
+    const monthlyPayment = target.monthlyPayment.value.toString().replace(",", ".")
     const time = target.time.value
     const fees = target.fees.value.toString().replace(",", ".").replace("%", "")
 
@@ -33,19 +33,23 @@ const apiFetch = (name, monthlyPayment, time, fees) => {
         body: [JSON.stringify(expr)]
     },)
         .then(response => response.json())
-        .then(makeHtmlElement)
+        .then(data => {
+            firstPage.classList.add('hidden')
+            secondPage.classList.remove('hidden')
+
+            const currency = function(number){
+                return new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2}).format(number)
+            }
+            
+            divSecondPage.innerHTML = `
+                <span> Olá ${name}, juntando ${currency(monthlyPayment)} todos mês, você terá ${currency(data.result)} em ${time} anos</span>
+            `
+            simulateAgain.addEventListener('click', reloadPage)
+        })
         .catch(apiErr)
+ 
 }
 
-
-const makeHtmlElement = function(data){
-    firstPage.classList.add('hidden')
-    secondPage.classList.remove('hidden')
-    divSecondPage.innerHTML = `
-        ${data.result}      
-    `
-    simulateAgain.addEventListener('click', reloadPage)
-}
 
 const apiErr = (response) => {
     firstPage.classList.add('hidden')
@@ -59,6 +63,7 @@ const apiErr = (response) => {
 
     simulateAgain.addEventListener('click', reloadPage)
 }
+
 
 
 

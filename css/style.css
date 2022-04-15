@@ -215,6 +215,10 @@ SECOND PAGE CSS
     display: none;
 }
 
+.contentSecondPage{
+    width: 50%;
+}
+
 
 /*--------------------------------
 MEDIA QUERY TO RESPONSIVE LAYOUT
