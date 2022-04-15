@@ -4,7 +4,7 @@ const secondPage = document.querySelector('.secondPage')
 const divSecondPage = document.querySelector('.contentSecondPage')
 const simulate = document.querySelector('.simulate')
 const simulateAgain = document.querySelector('.simulateAgain')
-const urlAPI = "http://api.mathjs.org/v4/"
+const urlAPI = "https://api.mathjs.org/v4/"
 
 
 
