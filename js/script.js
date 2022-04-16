@@ -59,7 +59,7 @@ const apiFetch = (name, monthlyPayment, time, fees) => {
             }
             
             divSecondPage.innerHTML = `
-                <span> Olá ${name}, juntando ${currency(monthlyPayment)} todos mês, você terá ${currency(data.result)} em ${time} anos</span>
+                <span> Olá ${name}, juntando ${currency(monthlyPayment)} todos mês, você terá ${currency(data.result)} em ${time} ${ time>1 ? 'anos' : 'ano'}</span>
             `
             simulateAgain.addEventListener('click', reloadPage)
         })

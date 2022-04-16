@@ -146,6 +146,7 @@ FIRST PAGE CSS
     color: var(--dark-color);
     background-color: var(--color-primary);
     box-shadow: 1px 1px 10px var(--dark-color);
+    cursor: pointer;
 }
 
 .firstPage .main .formFees button:hover{
@@ -217,6 +218,7 @@ SECOND PAGE CSS
     box-shadow: 1px 1px 10px var(--dark-color);
     margin-bottom: 30px;
     transition: transform .5s;
+    cursor: pointer;
 }
 
 .simulateAgain:hover{
